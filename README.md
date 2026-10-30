@@ -8,7 +8,6 @@ Medio digital sobre la cultura de Córdoba capital: música, teatro, agenda cult
 - `encuentro-plurinacional.html`: crónica del 39° Encuentro Plurinacional.
 - `agustin-sanchez-labrador.html`: entrevista a Agustín Sánchez Labrador.
 - `amy-winehouse-sinfonico.html`: noticia sobre el homenaje sinfónico a Amy Winehouse.
-- `ecos-del-aljibe-cierre.html`: noticia sobre el cierre del ciclo Ecos del Aljibe.
 - `styles.css`: el diseño de todas las páginas.
 - `app.js`: los filtros de la agenda, la encuesta y los botones para compartir.
 - `assets/fotos/`: las fotos de las notas.
