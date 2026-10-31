@@ -99,7 +99,7 @@ body::before { background: var(--noche); }
 /* Bloques de portada */
 section.bloque .wrap { padding-block: 72px; }
 .encabezado { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--linea); padding-bottom: 14px; margin-bottom: 32px; }
-.encabezado h2 { font-family: var(--display); font-weight: 400; font-size: 48px; line-height: 1; margin: 0; letter-spacing: .02em; }
+.encabezado h1, .encabezado h2 { font-family: var(--display); font-weight: 400; font-size: 48px; line-height: 1; margin: 0; letter-spacing: .02em; }
 .encabezado p { margin: 0; color: var(--gris); font-size: 16px; }
 .notas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; }
 .nota { display: flex; flex-direction: column; gap: 10px; min-width: 0; text-decoration: none; }
