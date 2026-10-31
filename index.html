@@ -150,6 +150,16 @@
         </div>
       </article>
       <article class="dest-agenda">
+        <figure><img src="assets/flyers/ciclo-cine-peru.jpg" alt="Flyer del Ciclo Cine del Perú en el Centro Cultural Córdoba, con las cuatro películas de los jueves de noviembre a las 20 h." loading="lazy"><figcaption>Flyer: Centro Cultural Córdoba</figcaption></figure>
+        <div class="dest-txt">
+          <span class="label tipo">Destacado</span>
+          <p class="dest-cuando">Jueves 5, 12, 19 y 26/11 · 20 h</p>
+          <h3>Ciclo de Cine del Perú</h3>
+          <p>Por primera vez, el Consulado General del Perú en Córdoba y el Centro Cultural Córdoba presentan cuatro películas sobre la memoria, la identidad, la pertenencia y la búsqueda de la libertad: El bien esquivo, Reinas, El canto de las mariposas y Kinra.</p>
+          <ul class="dest-datos"><li>Centro Cultural Córdoba, Av. Poeta Lugones 401</li><li>Entrada gratuita</li><li><a href="https://www.instagram.com/centroculturalcordoba/" target="_blank" rel="noopener">@centroculturalcordoba</a></li></ul>
+        </div>
+      </article>
+      <article class="dest-agenda">
         <figure><img src="assets/flyers/candelibro.jpg" alt="Flyer de Candelibro, sexta edición: un candelabro con una vela cuyas llamas son páginas de libro, la lista de poetas y músicos invitados y los datos del sábado 31 a las 19:30 en Cafetín." loading="lazy"><figcaption>Flyer: Cafetín Espacio Cultural</figcaption></figure>
         <div class="dest-txt">
           <span class="label tipo">Destacado</span>
@@ -215,6 +225,7 @@
         <button type="button" id="f-musica" data-f="musica" aria-pressed="false">Música</button>
         <button type="button" id="f-poesia" data-f="poesia" aria-pressed="false">Poesía y música</button>
         <button type="button" id="f-teatro" data-f="teatro" aria-pressed="false">Teatro</button>
+        <button type="button" id="f-cine" data-f="cine" aria-pressed="false">Cine</button>
         <button type="button" id="f-bares" data-f="bares" aria-pressed="false">Bares y fiestas</button>
         <button type="button" id="f-muestras" data-f="muestras" aria-pressed="false">Muestras y ferias</button>
         <button type="button" id="f-pez" data-f="pezvolcan" aria-pressed="false">Pez Volcán</button>
@@ -245,6 +256,7 @@
         <li data-c="bares"><div class="dia">DOM<span>1/11</span></div><div class="evento"><strong>Soul Bitches</strong><small>Jangadero · 22 h</small></div><span class="tag">Bares</span></li>
         <li data-c="musica"><div class="dia">JUE<span>5/11</span></div><div class="evento"><strong>Malosetti Trío</strong><small>Legrand Mercado Alberdi (Mendoza 471) · 20 h · $40.000</small></div><span class="tag">Música</span></li>
         <li data-c="musica pezvolcan"><div class="dia">JUE<span>5/11</span></div><div class="evento"><strong>Terribles Panas</strong><small>Pez Volcán (M. T. de Alvear 835) · 20 h · desde $8.000</small></div><span class="tag">Música</span></li>
+        <li data-c="cine"><div class="dia">JUE<span>5/11</span></div><div class="evento"><strong>Ciclo de Cine del Perú: El bien esquivo, de Augusto Tamayo San Román (2001)</strong><small>Centro Cultural Córdoba (Av. Poeta Lugones 401) · 20 h · entrada gratuita</small></div><span class="tag">Cine</span></li>
         <li data-c="musica"><div class="dia">VIE<span>6/11</span></div><div class="evento"><strong>Nómade: tributo a Virus</strong><small>Nómade · ubicación secreta, Cerro de las Rosas · 20 h</small></div><span class="tag">Música</span></li>
         <li data-c="teatro"><div class="dia">VIE<span>6/11</span></div><div class="evento"><strong>Se viene... se viene... Bialet Massé es más que un pueblo</strong><small>Teatro Real · 20:30 h</small></div><span class="tag">Teatro</span></li>
         <li data-c="musica pezvolcan"><div class="dia">VIE<span>6/11</span></div><div class="evento"><strong>Noche de Boleros: Catalina y Las Bordonas de Oro</strong><small>Pez Volcán (M. T. de Alvear 835) · 21 h · desde $25.000</small></div><span class="tag">Música</span></li>
@@ -255,13 +267,16 @@
         <li data-c="bares"><div class="dia">SÁB<span>7/11</span></div><div class="evento"><strong>Luaso x Trance</strong><small>Legrand Mercado Alberdi (Mendoza 471) · 20 h · $12.000</small></div><span class="tag">Electrónica</span></li>
         <li data-c="musica pezvolcan"><div class="dia">JUE<span>12/11</span></div><div class="evento"><strong>Rosa Profunda</strong><small>Pez Volcán (M. T. de Alvear 835) · 20 h · desde $12.000</small></div><span class="tag">Música</span></li>
         <li data-c="musica"><div class="dia">JUE<span>12/11</span></div><div class="evento"><strong>Nómade: tributo a Calamaro</strong><small>Nómade · ubicación secreta, Cerro de las Rosas · 20 h</small></div><span class="tag">Música</span></li>
+        <li data-c="cine"><div class="dia">JUE<span>12/11</span></div><div class="evento"><strong>Ciclo de Cine del Perú: Reinas, de Klaudia Reynicke (2024)</strong><small>Centro Cultural Córdoba (Av. Poeta Lugones 401) · 20 h · entrada gratuita</small></div><span class="tag">Cine</span></li>
         <li data-c="musica poesia"><div class="dia">VIE<span>13/11</span></div><div class="evento"><strong><a href="fer-cruza.html">La Noche Encendida: Coty Chávez, Sabri Gallegos y lectura de poesía de Gabriela Estofan</a></strong><small>La Hojarasca Libros, centro · última edición del año · libre y a la gorra, con reserva por <a href="https://www.instagram.com/noche.encendida.cba/" target="_blank" rel="noopener">@noche.encendida.cba</a></small></div><span class="tag">Poesía y música</span></li>
         <li data-c="musica pezvolcan"><div class="dia">VIE<span>13/11</span></div><div class="evento"><strong>Chelovecos presenta disco</strong><small>Pez Volcán (M. T. de Alvear 835) · 20 h · desde $8.000</small></div><span class="tag">Música</span></li>
         <li data-c="teatro"><div class="dia">VIE<span>13/11</span></div><div class="evento"><strong>Nicolás de Tracy</strong><small>Studio Theater · 21 h · desde $36.000</small></div><span class="tag">Humor</span></li>
         <li data-c="musica"><div class="dia">DOM<span>15/11</span></div><div class="evento"><strong><a href="pena-fulgura.html">Peña Fulgura, tercera edición: Mery Murúa, Fer Cruza, Cordillera, Fulgura Dúo y más</a></strong><small>Villa Rivera Indarte · 12 a 21 h · anticipada $15.000</small></div><span class="tag">Música</span></li>
         <li data-c="musica pezvolcan"><div class="dia">DOM<span>15/11</span></div><div class="evento"><strong>Sofía Viola</strong><small>Pez Volcán (M. T. de Alvear 835) · 20 h · desde $15.000</small></div><span class="tag">Música</span></li>
         <li data-c="musica pezvolcan"><div class="dia">MIÉ<span>18/11</span></div><div class="evento"><strong>El Caribefunk</strong><small>Pez Volcán (M. T. de Alvear 835) · 20 h · $32.000</small></div><span class="tag">Música</span></li>
+        <li data-c="cine"><div class="dia">JUE<span>19/11</span></div><div class="evento"><strong>Ciclo de Cine del Perú: El canto de las mariposas, de Núria Frigola Torrent (2020)</strong><small>Centro Cultural Córdoba (Av. Poeta Lugones 401) · 20 h · entrada gratuita</small></div><span class="tag">Cine</span></li>
         <li data-c="musica"><div class="dia">SÁB<span>21/11</span></div><div class="evento"><strong>Nómade: concierto secreto</strong><small>Nómade · ubicación secreta, barrio Alberdi · 20 h</small></div><span class="tag">Música</span></li>
+        <li data-c="cine"><div class="dia">JUE<span>26/11</span></div><div class="evento"><strong>Ciclo de Cine del Perú: Kinra, de Marco Panatonic (2023)</strong><small>Centro Cultural Córdoba (Av. Poeta Lugones 401) · 20 h · entrada gratuita</small></div><span class="tag">Cine</span></li>
         <li data-c="musica pezvolcan"><div class="dia">VIE<span>27/11</span></div><div class="evento"><strong>Candelabro (Chile) + Salas Velatorias</strong><small>Pez Volcán (M. T. de Alvear 835) · 20 h · desde $30.000</small></div><span class="tag">Música</span></li>
         <li data-c="musica"><div class="dia">VIE<span>27/11</span></div><div class="evento"><strong>El Príncipe Idiota</strong><small>Legrand Mercado Alberdi (Mendoza 471) · 20 h · $20.000</small></div><span class="tag">Música</span></li>
         <li data-c="teatro"><div class="dia">VIE<span>27/11</span></div><div class="evento"><strong>El cuarto de Verónica</strong><small>Teatro Ciudad de las Artes · 21:30 h</small></div><span class="tag">Teatro</span></li>
