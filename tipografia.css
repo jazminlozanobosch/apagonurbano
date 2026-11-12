@@ -96,3 +96,12 @@
   .skyline i::after, .skyline i.on::after { animation: none; }
   .skyline i.on::after { opacity: 1; }
 }
+
+/* Menú: letra en minúscula y botones parejos en el celular, sin huecos */
+.menu-barra a { text-transform: none; font-weight: 600; font-size: 15px; letter-spacing: 0; }
+@media (max-width: 860px) {
+  .menu-barra ul { display: flex; flex-wrap: wrap; }
+  .menu-barra li { flex: 1 1 auto; border-right: 1px solid #C9C4B8; border-bottom: 1px solid #C9C4B8; }
+  .menu-barra a, .menu-barra li:first-child a { display: block; text-align: center; padding: 12px 10px; font-size: 14.5px; letter-spacing: 0; }
+  .menu-barra li:first-child a[aria-current="page"] { padding-left: 10px; }
+}
