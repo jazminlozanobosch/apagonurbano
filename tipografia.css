@@ -74,3 +74,6 @@
 .btn-linea:hover { background: var(--violeta); color: var(--noche); border-color: var(--violeta); }
 .opciones button[aria-pressed="true"] { background: var(--violeta); border-color: var(--violeta); }
 .marca small { color: var(--violeta); }
+
+/* URBANO del logo en naranja */
+.marca small { color: #FF7A1A; }
