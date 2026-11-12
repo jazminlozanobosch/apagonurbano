@@ -38,3 +38,7 @@
   .dia { font-size: 22px; }
   .lectura p:first-of-type::first-letter { font-size: 64px; }
 }
+
+/* Lema debajo del logo, en Libre Franklin */
+.lema { font-family: var(--titular); font-style: normal; font-weight: 600; letter-spacing: -.005em; color: #E2DED4; }
+.lema em { font-style: normal; font-weight: 800; color: var(--farol); }
