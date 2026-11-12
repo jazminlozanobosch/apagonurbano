@@ -144,3 +144,7 @@
   .marca.grande b { font-size: 70px; }
   .marca.grande small { font-size: 13px; letter-spacing: .75em; padding-top: 8px; }
 }
+
+/* Quiénes somos: nombre de la directora destacado */
+.firma-qs { display: flex; flex-direction: column; gap: 6px; margin-top: 30px; padding-top: 18px; border-top: 3px solid var(--noche); }
+.firma-qs .nombre { font-family: var(--titular); font-weight: 800; font-size: clamp(28px, 3vw, 38px); line-height: 1.05; letter-spacing: -.015em; color: var(--noche); }
