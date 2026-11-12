@@ -1,0 +1,98 @@
+/* Apagón Urbano — tipografía nueva (Libre Franklin y PT Serif) y animaciones.
+   Solo cambia la letra: los colores son los de siempre. El logotipo mantiene su letra. */
+:root {
+  --titular: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --display: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --texto: "PT Serif", Georgia, "Times New Roman", serif;
+  --mono: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Logotipo: igual que siempre */
+.marca b { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; }
+.marca small { font-family: "Space Mono", ui-monospace, monospace; }
+
+/* Etiquetas, menú y datos */
+.label, .menu-barra a, nav.secciones a, .btn, .filtros button, .tag, .firma, .firma-nota, .volver,
+.dest-cuando, .dest-datos, figcaption, label, .nota-pie, .form-nota, .ok, .gracias, footer .wrap,
+.ejes span, .manifiesto .staff, .agenda li.mes h3, .evento small, .dia span, .mail-grande { font-family: var(--titular); }
+.label { letter-spacing: .1em; font-weight: 700; }
+.menu-barra a { font-weight: 700; letter-spacing: .06em; }
+.btn { letter-spacing: .06em; }
+
+/* Lema debajo del logo */
+.lema { font-family: var(--titular); font-style: normal; font-weight: 600; letter-spacing: -.005em; }
+.lema em { font-style: normal; font-weight: 800; }
+
+/* Titulares: Libre Franklin negrita, con tamaños ajustados */
+.hero h1 { font-family: var(--titular); font-weight: 800; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -.02em; }
+.encabezado h1, .encabezado h2 { font-family: var(--titular); font-weight: 800; font-size: 34px; letter-spacing: -.01em; }
+.nota h3 { font-family: var(--titular); font-weight: 700; font-size: 22px; line-height: 1.18; letter-spacing: -.005em; }
+.nota .img-agenda { font-family: var(--titular); font-weight: 900; font-size: 40px; line-height: 1; }
+.dest-txt h3, .destacados .dest-txt h3 { font-family: var(--titular); font-weight: 800; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.1; letter-spacing: -.01em; }
+.dia { font-family: var(--titular); font-weight: 800; font-size: 28px; line-height: 1; }
+.evento strong { font-family: var(--titular); font-weight: 700; font-size: 18px; }
+.manifiesto h2 { font-family: var(--titular); font-weight: 800; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.02; letter-spacing: -.02em; }
+.qs-texto .destacado { font-weight: 700; }
+.por-que h3 { font-family: var(--titular); font-weight: 800; font-size: 26px; letter-spacing: -.01em; }
+.contacto h2 { font-family: var(--titular); font-weight: 800; font-size: 42px; letter-spacing: -.015em; }
+.articulo-cab h1 { font-family: var(--titular); font-weight: 800; font-size: clamp(36px, 5.2vw, 64px); line-height: 1.04; letter-spacing: -.02em; }
+.lectura p:first-of-type::first-letter { font-family: var(--titular); font-weight: 800; font-size: 78px; line-height: .8; }
+.lectura h2 { font-family: var(--titular); font-weight: 800; font-size: 28px; line-height: 1.15; letter-spacing: -.01em; }
+.caja h2 { font-size: 24px; }
+@media (max-width: 860px) {
+  .dia { font-size: 22px; }
+  .lectura p:first-of-type::first-letter { font-size: 64px; }
+}
+
+/* Logo animado: la ciudad se levanta, la ventana se enciende y aparece el nombre */
+@keyframes subir { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes encender {
+  0%, 30% { opacity: 0; box-shadow: none; }
+  34% { opacity: 1; } 38% { opacity: .15; } 46% { opacity: 1; } 52% { opacity: .3; }
+  60%, 100% { opacity: 1; box-shadow: 0 0 22px 5px rgba(255, 176, 0, .45); }
+}
+@keyframes revelar { from { clip-path: inset(-40% 100% -20% 0); } to { clip-path: inset(-40% -5% -20% 0); } }
+@keyframes abrir { from { opacity: 0; letter-spacing: .1em; } to { opacity: 1; } }
+@keyframes aparecer { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.marca .iso span { transform-origin: bottom; animation: subir .7s cubic-bezier(.2, .8, .2, 1) both; }
+.marca .iso span:nth-child(1) { animation-delay: .05s; }
+.marca .iso span:nth-child(2) { animation-delay: .2s; }
+.marca .iso span:nth-child(3) { animation-delay: .35s; }
+.marca .iso span:nth-child(2)::after, .marca.grande .iso span:nth-child(2)::after { animation: encender 1.4s .7s both, titila 7s 2.4s infinite; }
+.marca b { animation: revelar .8s .45s cubic-bezier(.6, 0, .2, 1) both; }
+.marca small { animation: abrir 1s 1.1s ease-out both; }
+.masthead .lema { animation: aparecer .7s 1.6s ease-out both; }
+.marca:hover .iso span:nth-child(2)::after, .marca.grande:hover .iso span:nth-child(2)::after { animation: encender 1s both; }
+
+/* Franja de edificios: la luz salta de una ventana a otra.
+   Está en la portada y al final de cada sección. */
+@keyframes ventana {
+  0% { opacity: 0; } 2% { opacity: 1; } 3% { opacity: .3; } 4.5% { opacity: 1; }
+  13% { opacity: 1; } 16%, 100% { opacity: 0; }
+}
+.skyline i::after, .skyline i.on::after {
+  content: ""; position: absolute; left: 50%; top: 18px; width: 12px; height: 15px; margin-left: -6px;
+  background: var(--farol); box-shadow: 0 0 18px 3px rgba(255, 176, 0, .35); opacity: 0;
+  animation: ventana 19.2s linear infinite; animation-delay: calc(var(--off, 0s) + var(--d, 0s));
+}
+.skyline i.on::after { top: 22px; width: 16px; height: 20px; margin-left: -8px; }
+.skyline i:nth-child(4) { --d: 0s; }   .skyline i:nth-child(9) { --d: 1.6s; }
+.skyline i:nth-child(2) { --d: 3.2s; } .skyline i:nth-child(11) { --d: 4.8s; }
+.skyline i:nth-child(6) { --d: 6.4s; } .skyline i:nth-child(8) { --d: 8s; }
+.skyline i:nth-child(1) { --d: 9.6s; } .skyline i:nth-child(5) { --d: 11.2s; }
+.skyline i:nth-child(12) { --d: 12.8s; } .skyline i:nth-child(3) { --d: 14.4s; }
+.skyline i:nth-child(10) { --d: 16s; } .skyline i:nth-child(7) { --d: 17.6s; }
+.skyline i:nth-child(odd)::after { left: 34%; }
+.skyline i:nth-child(3n)::after { top: 30px; left: 64%; }
+
+.skyline-fin { position: relative; height: 130px; overflow: hidden; background: var(--noche); border-bottom: 1px solid var(--linea); }
+.skyline-fin .skyline { height: 100%; }
+@media (max-width: 860px) { .skyline-fin { height: 100px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .marca .iso span, .marca b, .marca small, .masthead .lema,
+  .marca .iso span:nth-child(2)::after, .marca.grande .iso span:nth-child(2)::after,
+  .marca:hover .iso span:nth-child(2)::after, .marca.grande:hover .iso span:nth-child(2)::after { animation: none; }
+  .skyline i::after, .skyline i.on::after { animation: none; }
+  .skyline i.on::after { opacity: 1; }
+}
