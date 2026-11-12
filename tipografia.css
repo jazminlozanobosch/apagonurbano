@@ -1,0 +1,40 @@
+/* Apagón Urbano — diseño original con la tipografía de la prueba "diario":
+   titulares en Libre Franklin, texto en PT Serif. El logotipo no cambia. */
+:root {
+  --titular: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --display: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --texto: "PT Serif", Georgia, "Times New Roman", serif;
+  --mono: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+}
+/* Logotipo: igual que siempre */
+.marca b { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; }
+.marca small { font-family: "Space Mono", ui-monospace, monospace; }
+
+/* Etiquetas, menú y datos */
+.label, .menu-barra a, nav.secciones a, .btn, .filtros button, .tag, .firma, .firma-nota, .volver,
+.dest-cuando, .dest-datos, figcaption, label, .nota-pie, .form-nota, .ok, .gracias, footer .wrap,
+.ejes span, .manifiesto .staff, .agenda li.mes h3, .evento small, .dia span, .mail-grande { font-family: var(--titular); }
+.label { letter-spacing: .1em; font-weight: 700; }
+.menu-barra a { font-weight: 700; letter-spacing: .06em; }
+.btn { letter-spacing: .06em; }
+
+/* Titulares: Franklin negrita, en minúscula y con tamaños ajustados (es más ancha que la Bebas) */
+.hero h1 { font-family: var(--titular); font-weight: 800; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -.02em; }
+.encabezado h1, .encabezado h2 { font-family: var(--titular); font-weight: 800; font-size: 34px; letter-spacing: -.01em; }
+.nota h3 { font-family: var(--titular); font-weight: 700; font-size: 22px; line-height: 1.18; letter-spacing: -.005em; }
+.nota .img-agenda { font-family: var(--titular); font-weight: 900; font-size: 40px; line-height: 1; }
+.dest-txt h3, .destacados .dest-txt h3 { font-family: var(--titular); font-weight: 800; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.1; letter-spacing: -.01em; }
+.dia { font-family: var(--titular); font-weight: 800; font-size: 28px; line-height: 1; }
+.evento strong { font-family: var(--titular); font-weight: 700; font-size: 18px; }
+.manifiesto h2 { font-family: var(--titular); font-weight: 800; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.02; letter-spacing: -.02em; }
+.qs-texto .destacado { font-weight: 700; }
+.por-que h3 { font-family: var(--titular); font-weight: 800; font-size: 26px; letter-spacing: -.01em; }
+.contacto h2 { font-family: var(--titular); font-weight: 800; font-size: 42px; letter-spacing: -.015em; }
+.articulo-cab h1 { font-family: var(--titular); font-weight: 800; font-size: clamp(36px, 5.2vw, 64px); line-height: 1.04; letter-spacing: -.02em; }
+.lectura p:first-of-type::first-letter { font-family: var(--titular); font-weight: 800; font-size: 78px; line-height: .8; }
+.lectura h2 { font-family: var(--titular); font-weight: 800; font-size: 28px; line-height: 1.15; letter-spacing: -.01em; }
+.caja h2 { font-size: 24px; }
+@media (max-width: 860px) {
+  .dia { font-size: 22px; }
+  .lectura p:first-of-type::first-letter { font-size: 64px; }
+}
