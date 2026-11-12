@@ -105,3 +105,29 @@
   .menu-barra a, .menu-barra li:first-child a { display: block; text-align: center; padding: 12px 10px; font-size: 14.5px; letter-spacing: 0; }
   .menu-barra li:first-child a[aria-current="page"] { padding-left: 10px; }
 }
+
+/* Celular: logo un poco más chico para que no lo pisen Instagram y Facebook */
+@media (max-width: 860px) {
+  .mh-top { flex-wrap: nowrap; align-items: flex-start; }
+  .mh-marca { min-width: 0; flex: 1 1 auto; }
+  .mh-lado { flex: 0 0 auto; }
+  .marca.grande { gap: 10px; }
+  .marca.grande .iso { height: 52px; gap: 4px; }
+  .marca.grande .iso span { width: 15px; }
+  .marca.grande .iso span:nth-child(1) { height: 27px; }
+  .marca.grande .iso span:nth-child(2) { height: 52px; width: 19px; }
+  .marca.grande .iso span:nth-child(2)::after { left: 6px; top: 9px; width: 7px; height: 9px; }
+  .marca.grande .iso span:nth-child(3) { height: 39px; }
+  .marca.grande b { font-size: 56px; }
+  .marca.grande small { font-size: 11px; letter-spacing: .7em; padding-top: 6px; }
+  .mh-lado .redes { margin-right: -10px; }
+  .redes a { width: 40px; height: 40px; }
+}
+@media (max-width: 380px) {
+  .marca.grande b { font-size: 48px; }
+  .marca.grande .iso { height: 44px; }
+  .marca.grande .iso span:nth-child(2) { height: 44px; }
+  .marca.grande .iso span:nth-child(3) { height: 33px; }
+  .marca.grande .iso span:nth-child(1) { height: 23px; }
+  .marca.grande small { letter-spacing: .55em; }
+}
