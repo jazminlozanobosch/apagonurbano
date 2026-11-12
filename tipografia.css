@@ -66,3 +66,11 @@
   padding: 5px 10px 4px; line-height: 1.2;
 }
 .hero .kicker { margin-bottom: 4px; }
+
+/* Botones y "URBANO" del logo en azul violáceo */
+.btn { background: var(--violeta); color: var(--noche); }
+.btn:hover { background: var(--tiza); color: var(--noche); }
+.btn-linea { background: transparent; color: var(--tiza); }
+.btn-linea:hover { background: var(--violeta); color: var(--noche); border-color: var(--violeta); }
+.opciones button[aria-pressed="true"] { background: var(--violeta); border-color: var(--violeta); }
+.marca small { color: var(--violeta); }
