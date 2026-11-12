@@ -58,3 +58,11 @@
 .lectura p:first-of-type::first-letter { color: var(--tiza); }
 .dest-datos li::before { color: var(--gris); }
 .nota:hover h3, .lectura a { text-decoration-color: var(--gris); }
+
+/* Recuadros de sección (Noticia, Crónica, Entrevista, Agenda) en azul violáceo */
+:root { --violeta: #7A6CFF; }
+.nota .seccion, .tipo, .hero .kicker {
+  display: inline-block; align-self: flex-start; background: var(--violeta); color: var(--noche);
+  padding: 5px 10px 4px; line-height: 1.2;
+}
+.hero .kicker { margin-bottom: 4px; }
