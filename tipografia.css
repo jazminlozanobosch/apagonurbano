@@ -113,3 +113,33 @@
   .marca .iso span:nth-child(2)::after, .marca.grande .iso span:nth-child(2)::after,
   .marca:hover .iso span:nth-child(2)::after, .marca.grande:hover .iso span:nth-child(2)::after { animation: none; }
 }
+
+/* Skyline de la portada: la luz salta de una ventana a otra */
+@keyframes ventana {
+  0% { opacity: 0; } 2% { opacity: 1; } 3% { opacity: .3; } 4.5% { opacity: 1; }
+  13% { opacity: 1; } 16%, 100% { opacity: 0; }
+}
+.skyline i::after {
+  content: ""; position: absolute; left: 50%; top: 18px; width: 12px; height: 15px; margin-left: -6px;
+  background: var(--farol); box-shadow: 0 0 18px 3px rgba(255, 176, 0, .35); opacity: 0;
+  animation: ventana 19.2s linear infinite;
+}
+.skyline i.on::after { top: 22px; width: 16px; height: 20px; margin-left: -8px; opacity: 0; animation: ventana 19.2s linear infinite; }
+.skyline i:nth-child(4)::after { animation-delay: 0.0s; }
+.skyline i:nth-child(9)::after { animation-delay: 1.6s; }
+.skyline i:nth-child(2)::after { animation-delay: 3.2s; }
+.skyline i:nth-child(11)::after { animation-delay: 4.8s; }
+.skyline i:nth-child(6)::after { animation-delay: 6.4s; }
+.skyline i:nth-child(8)::after { animation-delay: 8.0s; }
+.skyline i:nth-child(1)::after { animation-delay: 9.6s; }
+.skyline i:nth-child(5)::after { animation-delay: 11.2s; }
+.skyline i:nth-child(12)::after { animation-delay: 12.8s; }
+.skyline i:nth-child(3)::after { animation-delay: 14.4s; }
+.skyline i:nth-child(10)::after { animation-delay: 16.0s; }
+.skyline i:nth-child(7)::after { animation-delay: 17.6s; }
+.skyline i:nth-child(odd)::after { left: 34%; }
+.skyline i:nth-child(3n)::after { top: 30px; left: 64%; }
+@media (prefers-reduced-motion: reduce) {
+  .skyline i::after { animation: none; }
+  .skyline i.on::after { opacity: 1; }
+}
