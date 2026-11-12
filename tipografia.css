@@ -42,3 +42,6 @@
 /* Lema debajo del logo, en Libre Franklin */
 .lema { font-family: var(--titular); font-style: normal; font-weight: 600; letter-spacing: -.005em; color: #E2DED4; }
 .lema em { font-style: normal; font-weight: 800; color: var(--farol); }
+
+/* Títulos sin amarillo */
+.hero h1 em { color: inherit; }
