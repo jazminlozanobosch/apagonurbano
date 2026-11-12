@@ -77,3 +77,10 @@
 
 /* URBANO del logo en naranja */
 .marca small { color: #FF7A1A; }
+
+/* Menú: color al pasar el mouse o tocar, en el mismo naranja de URBANO */
+:root { --naranja: #FF7A1A; }
+.marca small { color: var(--naranja); }
+.menu-barra a:hover, .menu-barra a:focus-visible, .menu-barra a:active { background: var(--naranja); color: var(--noche); }
+.menu-barra li:first-child a:hover { box-shadow: -12px 0 0 var(--naranja); }
+@media (max-width: 860px) { .menu-barra li:first-child a:hover { box-shadow: none; } }
