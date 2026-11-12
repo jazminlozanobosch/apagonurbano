@@ -118,7 +118,7 @@
   .marca.grande .iso span:nth-child(2) { height: 52px; width: 19px; }
   .marca.grande .iso span:nth-child(2)::after { left: 6px; top: 9px; width: 7px; height: 9px; }
   .marca.grande .iso span:nth-child(3) { height: 39px; }
-  .marca.grande b { font-size: 56px; }
+  .marca.grande b { font-size: clamp(48px, 13.5vw, 70px); }
   .marca.grande small { font-size: 11px; letter-spacing: .7em; padding-top: 6px; }
   .mh-lado .redes { margin-right: -10px; }
   .redes a { width: 40px; height: 40px; }
@@ -130,4 +130,17 @@
   .marca.grande .iso span:nth-child(3) { height: 33px; }
   .marca.grande .iso span:nth-child(1) { height: 23px; }
   .marca.grande small { letter-spacing: .55em; }
+}
+
+/* Tablets y ventanas medianas: el logo vuelve al tamaño que tenía */
+@media (min-width: 600px) and (max-width: 860px) {
+  .marca.grande { gap: 14px; }
+  .marca.grande .iso { height: 66px; gap: 5px; }
+  .marca.grande .iso span { width: 19px; }
+  .marca.grande .iso span:nth-child(1) { height: 34px; }
+  .marca.grande .iso span:nth-child(2) { height: 66px; width: 24px; }
+  .marca.grande .iso span:nth-child(2)::after { left: 7.5px; top: 12px; width: 9px; height: 12px; }
+  .marca.grande .iso span:nth-child(3) { height: 50px; }
+  .marca.grande b { font-size: 70px; }
+  .marca.grande small { font-size: 13px; letter-spacing: .75em; padding-top: 8px; }
 }
